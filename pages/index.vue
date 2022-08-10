@@ -21,5 +21,6 @@ export default {
     console.log("tes eslint");
     return { piniaStore };
   },
+  // return current time in seconds
 };
 </script>

@@ -26,7 +26,7 @@ For detailed explanation on how things work, check out the [documentation](https
 
 [] deployment
 
-[] web vercel
+[x] web vercel
 
 ## Special Directories
 
