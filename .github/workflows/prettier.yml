@@ -14,7 +14,5 @@ jobs:
         with:
           node-version: "14"
           cache: "yarn"
-      - run: yarn
-      - run: yarn prettier --check "components/**/*.{js,jsx,ts,tsx,}"
       - run: yarn prettier --check "pages/**/*.{js,jsx,ts,tsx,}"
       - run: yarn prettier --check "store/**/*.{js,jsx,ts,tsx,}"
