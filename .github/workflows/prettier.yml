@@ -6,17 +6,15 @@ on:
 
 jobs:
   prettier:
+    name: Run Prettier Check
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repo
-        uses: actions/checkout@v2
-      - uses: actions/cache@v2
-        name: Configure npm caching
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-npm-${{ hashFiles('**/workflows/prettier.yml') }}
-          restore-keys: |
-            ${{ runner.os }}-npm-
-      - name: Run prettier
-        run: |-
-          npm run prettier-check
+          node-version: "14"
+          cache: "yarn"
+      - run: yarn
+      - run: yarn prettier --check components/**/*.{js,jsx,ts,tsx,}
+      - run: yarn prettier --check pages/**/*.{js,jsx,ts,tsx,}
+      - run: yarn prettier --check store/**/*.{js,jsx,ts,tsx,}
