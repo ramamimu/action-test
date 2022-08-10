@@ -7,6 +7,7 @@
       yang ini adalah pinia {{ piniaStore.count }}
     </p>
     <p @click="piniaStore.$reset()">buat reset pinia</p>
+    <p>coba ah, hehehe</p>
   </div>
 </template>
 
