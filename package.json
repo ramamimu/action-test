@@ -8,7 +8,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "prettier:write": "yarn prettier --write .",
-    "prettier:check": "yarn prettier --check ."
+    "prettier:check": "yarn prettier -c ."
   },
   "dependencies": {
     "@nuxtjs/composition-api": "^0.33.1",
